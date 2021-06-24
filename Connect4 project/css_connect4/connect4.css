@@ -1,0 +1,42 @@
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+body {
+    background-image: url(http://i.imgur.com/P7gpI.jpg);
+}
+
+.gameBoard {
+    border: 5px solid black;
+    height: 300px;
+    width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    background: white;
+}
+
+.gameBoard div {
+    height: 50px;
+    width: 50px;
+}
+
+.p1 {
+    background-color: red;
+    border-radius: 25px;
+    background-image: url(https://i.imgur.com/TtqymjE.jpgcss_connect4/imgbin-nicolas-cage-face-off-film-youtube-youtube-cGLPqKz1ShNa8XJsFhkxMr7ag);
+}
+
+.p2 {
+    background-color: black;
+    border-radius: 50px;
+    background-image: url(https://i.imgur.com/ShX5Aqw.jpg);
+}
