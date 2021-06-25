@@ -12,6 +12,8 @@ h3 {
 
 body {
     background-image: url(http://i.imgur.com/P7gpI.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .gameBoard {
