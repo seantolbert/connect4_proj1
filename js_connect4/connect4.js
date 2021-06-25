@@ -95,6 +95,7 @@ function buildBoard() {
     let tile = document.createElement("div");
     tile.id = i;
     tile.setAttribute("class", "tile");
+    tile.classList.add('grid-item')
     board.push(0);
     gameBoard.appendChild(tile);
   }
