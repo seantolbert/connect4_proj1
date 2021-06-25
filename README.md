@@ -1,14 +1,10 @@
 # Connect 4 Nicky Cage
 A simple free floating version of the classic connect 4 where we leverage the honor system for tile stacking!
 
-### Link to game:
+### Link to game
+https://seantolbert.github.io/connect4_proj1/
 
-
-
-
-
-
-
+<img src="https://i.imgur.com/SnWJwbg.png">
 
 ## Directions
 The goal of the game is to get **4 tiles in a row** either diagonally, vertically, or horizontally, before the opposing player.
@@ -18,7 +14,7 @@ The goal of the game is to get **4 tiles in a row** either diagonally, verticall
 ## Technologies used
 HTML, CSS, Javascript
 
-## Next Steps:
+## Next Steps
 Reset button, scoreboard, 'gravity' function forcing the stacking of tiles for the game, computer opponent AI
 
 ## **Who is Nicholas Cage?!**
