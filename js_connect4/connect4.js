@@ -1,6 +1,7 @@
 // Constants
 let board = [];
 // Cached Elements
+const error = document.querySelector(".error");
 const gameBoard = document.querySelector(".gameBoard");
 const tiles = document.querySelector(".gameboard div");
 const result = document.querySelector("#result");
@@ -95,7 +96,7 @@ function buildBoard() {
     let tile = document.createElement("div");
     tile.id = i;
     tile.setAttribute("class", "tile");
-    tile.classList.add('grid-item')
+    tile.classList.add("grid-item");
     board.push(0);
     gameBoard.appendChild(tile);
   }
@@ -110,18 +111,17 @@ function rectify(e) {
       currentPlayer = 2;
       currentPlayerDisplay.innerHTML = currentPlayer;
       board[link.id] = 1;
-      console.log(link);
-      console.log(board);
+      error.innerHTML = " ";
     } else if (currentPlayer === 2) {
       link.classList.remove("tile");
       link.classList.add("played");
       currentPlayer = 1;
       currentPlayerDisplay.innerHTML = currentPlayer;
       board[link.id] = -1;
-      console.log(link);
+      error.innerHTML = " ";
     }
   } else if (link.classList.contains("played")) {
-    alert("what makes you think you can play a tile here");
+    error.innerHTML = "What makes you think you can click there?";
   }
 
   for (let i = 0; i < board.length; i++) {
@@ -133,20 +133,27 @@ function rectify(e) {
       link.style.background = "white";
     }
   }
+  checkWinner()
+}
 
+function checkWinner() {
   for (let i = 0; i < winningArrays.length; i++) {
     for (let x = 0; x < winningArrays[i].length; x++) {
       if (
         board[winningArrays[i][x]] +
           board[winningArrays[i][x + 1]] +
           board[winningArrays[i][x + 2]] +
-          board[winningArrays[i][x + 3]] === 4) {
+          board[winningArrays[i][x + 3]] ===
+        4
+      ) {
         winner.innerHTML = "Player 1 Wins!";
       } else if (
         board[winningArrays[i][x]] +
           board[winningArrays[i][x + 1]] +
           board[winningArrays[i][x + 2]] +
-          board[winningArrays[i][x + 3]] === -4) {
+          board[winningArrays[i][x + 3]] ===
+        -4
+      ) {
         winner.innerHTML = "Player 2 Wins!";
       }
     }
